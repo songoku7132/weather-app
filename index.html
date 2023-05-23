@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <title>Weather App</title>
+    <script src="main.js" defer></script>
+    <link rel="icon" type="image/png" href="sun-100.png" />
+</head>
+
+<body>
+    <div class="container">
+        <div class="current">
+            <div class="left-current">
+                <div class="left-row">
+                    <p class="condition"></p>
+                </div>
+                <div class="left-row">
+                    <p class="city-name"></p>
+                </div>
+                <div class="left-row">
+                    <p class="date"></p>
+                </div>
+                <div class="left-row">
+                    <p class="temp"></p>
+                </div>
+                <div class="left-row">
+                    <img class="condition-img">
+                </div>
+                <div class="left-row">
+                    <div class="search-box">
+                        <input type="text" class="search" placeholder="Search Location...">
+                        <div class="search-btn"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="right-current">
+                <div class="right-row">
+                    <img src="" alt="" class="right-img one">
+                    <div class="right-box">
+                        <p class="right-title">Feels Like</p>
+                        <p class="feels-like"></p>
+                    </div>
+                </div>
+                <div class="right-row">
+                    <img src="" alt="" class="right-img two">
+                    <div class="right-box">
+                        <p class="right-title">Humidity</p>
+                        <p class="humidity"></p>
+                    </div>
+                </div>
+                <div class="right-row">
+                    <img src="" alt="" class="right-img three">
+                    <div class="right-box">
+                        <p class="right-title">Chance of Rain</p>
+                        <p class="chance-of-rain"></p>
+                    </div>
+                </div>
+                <div class="right-row">
+                    <img src="" alt="" class="right-img fourth">
+                    <div class="right-box">
+                        <p class="right-title">Wind Speed</p>
+                        <p class="wind-speed"></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="main-cont">
+            <div class="left-btn" id="l-btn1">
+                <img src="arrow-left.png" alt="" class="btn-left">
+            </div>
+            <div class="forecast">
+                <div class="forecast-container" id="for-con1">
+                    <div class="cell" id="1">
+                        <p class="week-day" id="day-1"></p>
+                        <p class="week-temp" id="temp-1"></p>
+                        <img src="" alt="" class="week-img" id="img-1">
+                    </div>
+                    <div class="cell" id="2">
+                        <p class="week-day" id="day-2"></p>
+                        <p class="week-temp" id="temp-2"></p>
+                        <img src="" alt="" class="week-img" id="img-2">
+                    </div>
+                    <div class="cell" id="3">
+                        <p class="week-day" id="day-3"></p>
+                        <p class="week-temp" id="temp-3"></p>
+                        <img src="" alt="" class="week-img" id="img-3">
+                    </div>
+                    <div class="cell" id="4">
+                        <p class="week-day" id="day-4"></p>
+                        <p class="week-temp" id="temp-4"></p>
+                        <img src="" alt="" class="week-img" id="img-4">
+                    </div>
+                    <div class="cell" id="5">
+                        <p class="week-day" id="day-5"></p>
+                        <p class="week-temp" id="temp-5"></p>
+                        <img src="" alt="" class="week-img" id="img-5">
+                    </div>
+                    <div class="cell" id="6">
+                        <p class="week-day" id="day-6"></p>
+                        <p class="week-temp" id="temp-6"></p>
+                        <img src="" alt="" class="week-img" id="img-6">
+                    </div>
+                    <div class="cell" id="7">
+                        <p class="week-day" id="day-7"></p>
+                        <p class="week-temp" id="temp-7"></p>
+                        <img src="" alt="" class="week-img" id="img-7">
+                    </div>
+                    <div class="cell" id="8">
+                        <p class="week-day" id="day-8"></p>
+                        <p class="week-temp" id="temp-8"></p>
+                        <img src="" alt="" class="week-img" id="img-8">
+                    </div>
+                    <div class="cell" id="9">
+                        <p class="week-day" id="day-9"></p>
+                        <p class="week-temp" id="temp-9"></p>
+                        <img src="" alt="" class="week-img" id="img-9">
+                    </div>
+                    <div class="cell" id="10">
+                        <p class="week-day" id="day-10"></p>
+                        <p class="week-temp" id="temp-10"></p>
+                        <img src="" alt="" class="week-img" id="img-10">
+                    </div>
+                    <div class="cell" id="11">
+                        <p class="week-day" id="day-11"></p>
+                        <p class="week-temp" id="temp-11"></p>
+                        <img src="" alt="" class="week-img" id="img-11">
+                    </div>
+                    <div class="cell" id="12">
+                        <p class="week-day" id="day-12"></p>
+                        <p class="week-temp" id="temp-12"></p>
+                        <img src="" alt="" class="week-img" id="img-12">
+                    </div>
+                    <div class="cell" id="13">
+                        <p class="week-day" id="day-13"></p>
+                        <p class="week-temp" id="temp-13"></p>
+                        <img src="" alt="" class="week-img" id="img-13">
+                    </div>
+                </div>
+            </div>
+            <div class="right-btn" id="r-btn1">
+                <img src="arrow-right.png" alt="" class="btn-right">
+            </div>
+        </div>
+        <div class="main-cont">
+            <div class="left-btn" id="l-btn2">
+                <img src="arrow-left.png" alt="" class="btn-left">
+            </div>
+            <div class="forecast">
+                <div class="forecast-container2" id="for-con2">
+                    <div class="cell" id="1">
+                        <p class="week-day" id="hour-1"></p>
+                        <p class="week-temp" id="hour-temp-1"></p>
+                        <img src="" alt="" class="week-img" id="hour-img-1">
+                    </div>
+                    <div class="cell" id="2">
+                        <p class="week-day" id="hour-2"></p>
+                        <p class="week-temp" id="hour-temp-2"></p>
+                        <img src="" alt="" class="week-img" id="hour-img-2">
+                    </div>
+                    <div class="cell" id="3">
+                        <p class="week-day" id="hour-3"></p>
+                        <p class="week-temp" id="hour-temp-3"></p>
+                        <img src="" alt="" class="week-img" id="hour-img-3">
+                    </div>
+                    <div class="cell" id="4">
+                        <p class="week-day" id="hour-4"></p>
+                        <p class="week-temp" id="hour-temp-4"></p>
+                        <img src="" alt="" class="week-img" id="hour-img-4">
+                    </div>
+                    <div class="cell" id="5">
+                        <p class="week-day" id="hour-5"></p>
+                        <p class="week-temp" id="hour-temp-5"></p>
+                        <img src="" alt="" class="week-img" id="hour-img-5">
+                    </div>
+                    <div class="cell" id="6">
+                        <p class="week-day" id="hour-6"></p>
+                        <p class="week-temp" id="hour-temp-6"></p>
+                        <img src="" alt="" class="week-img" id="hour-img-6">
+                    </div>
+                    <div class="cell" id="7">
+                        <p class="week-day" id="hour-7"></p>
+                        <p class="week-temp" id="hour-temp-7"></p>
+                        <img src="" alt="" class="week-img" id="hour-img-7">
+                    </div>
+                    <div class="cell" id="8">
+                        <p class="week-day" id="hour-8"></p>
+                        <p class="week-temp" id="hour-temp-8"></p>
+                        <img src="" alt="" class="week-img" id="hour-img-8">
+                    </div>
+                    <div class="cell" id="9">
+                        <p class="week-day" id="hour-9"></p>
+                        <p class="week-temp" id="hour-temp-9"></p>
+                        <img src="" alt="" class="week-img" id="hour-img-9">
+                    </div>
+                    <div class="cell" id="10">
+                        <p class="week-day" id="hour-10"></p>
+                        <p class="week-temp" id="hour-temp-10"></p>
+                        <img src="" alt="" class="week-img" id="hour-img-10">
+                    </div>
+                    <div class="cell" id="11">
+                        <p class="week-day" id="hour-11"></p>
+                        <p class="week-temp" id="hour-temp-11"></p>
+                        <img src="" alt="" class="week-img" id="hour-img-11">
+                    </div>
+                    <div class="cell" id="12">
+                        <p class="week-day" id="hour-12"></p>
+                        <p class="week-temp" id="hour-temp-12"></p>
+                        <img src="" alt="" class="week-img" id="hour-img-12">
+                    </div>
+                    <div class="cell" id="13">
+                        <p class="week-day" id="hour-13"></p>
+                        <p class="week-temp" id="hour-temp-13"></p>
+                        <img src="" alt="" class="week-img" id="hour-img-13">
+                    </div>
+                    <div class="cell" id="14">
+                        <p class="week-day" id="hour-14"></p>
+                        <p class="week-temp" id="hour-temp-14"></p>
+                        <img src="" alt="" class="week-img" id="hour-img-14">
+                    </div>
+                    <div class="cell" id="15">
+                        <p class="week-day" id="hour-15"></p>
+                        <p class="week-temp" id="hour-temp-15"></p>
+                        <img src="" alt="" class="week-img" id="hour-img-15">
+                    </div>
+                    <div class="cell" id="16">
+                        <p class="week-day" id="hour-16"></p>
+                        <p class="week-temp" id="hour-temp-16"></p>
+                        <img src="" alt="" class="week-img" id="hour-img-16">
+                    </div>
+                    <div class="cell" id="17">
+                        <p class="week-day" id="hour-17"></p>
+                        <p class="week-temp" id="hour-temp-17"></p>
+                        <img src="" alt="" class="week-img" id="hour-img-17">
+                    </div>
+                    <div class="cell" id="18">
+                        <p class="week-day" id="hour-18"></p>
+                        <p class="week-temp" id="hour-temp-18"></p>
+                        <img src="" alt="" class="week-img" id="hour-img-18">
+                    </div>
+                    <div class="cell" id="19">
+                        <p class="week-day" id="hour-19"></p>
+                        <p class="week-temp" id="hour-temp-19"></p>
+                        <img src="" alt="" class="week-img" id="hour-img-19">
+                    </div>
+                    <div class="cell" id="20">
+                        <p class="week-day" id="hour-20"></p>
+                        <p class="week-temp" id="hour-temp-20"></p>
+                        <img src="" alt="" class="week-img" id="hour-img-20">
+                    </div>
+                    <div class="cell" id="21">
+                        <p class="week-day" id="hour-21"></p>
+                        <p class="week-temp" id="hour-temp-21"></p>
+                        <img src="" alt="" class="week-img" id="hour-img-21">
+                    </div>
+                    <div class="cell" id="22">
+                        <p class="week-day" id="hour-22"></p>
+                        <p class="week-temp" id="hour-temp-22"></p>
+                        <img src="" alt="" class="week-img" id="hour-img-22">
+                    </div>
+                    <div class="cell" id="23">
+                        <p class="week-day" id="hour-23"></p>
+                        <p class="week-temp" id="hour-temp-23"></p>
+                        <img src="" alt="" class="week-img" id="hour-img-23">
+                    </div>
+                    <div class="cell" id="24">
+                        <p class="week-day" id="hour-24"></p>
+                        <p class="week-temp" id="hour-temp-24"></p>
+                        <img src="" alt="" class="week-img" id="hour-img-24">
+                    </div>
+                </div>
+            </div>
+            <div class="right-btn" id="r-btn2">
+                <img src="arrow-right.png" alt="" class="btn-right">
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
