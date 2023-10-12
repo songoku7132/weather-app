@@ -3,7 +3,7 @@ const getWeekDay = (datec) => {
   return days[datec.getDay()];
 };
 const makeDays = (Data) => {
-  for (let i = 1; i < 14; i++) {
+  for (let i = 1; i < 3; i++) {
     const days = document.querySelector(`#day-${i}`);
     const temps = document.querySelector(`#temp-${i}`);
     const imgs = document.querySelector(`#img-${i}`);

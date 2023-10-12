@@ -18,6 +18,7 @@ async function showWeather(town) {
 
     const response = await fetch(`https://api.weatherapi.com/v1/forecast.json?key=880b340e19134025adb60047231705&q=${town}&days=14`, { mode: 'cors' });
     const weatherData = await response.json();
+    console.log(weatherData)
     const locationName = weatherData.location.name;
     const cloudy = weatherData.current.condition.text;
     const localTime = weatherData.location.localtime;
@@ -42,7 +43,7 @@ async function showWeather(town) {
     img.src = imgFix;
     firstCell.innerHTML = weekDay;
     makeDays(weatherData);
-    for (let i = 1; i < 14; i++) {
+    for (let i = 1; i < 3; i++) {
       const Btn = document.getElementById(`${i}`);
       Btn.addEventListener('click', () => {
         makeHours(i, weatherData);
